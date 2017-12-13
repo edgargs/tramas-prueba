@@ -1,0 +1,14 @@
+# https://springframework.guru/configuring-spring-boot-for-microsoft-sql-server/
+spring:
+    datasource:
+        url: jdbc:sqlserver://192.168.5.35:1433;databaseName=TRAMAS
+        username: sa
+        password: hcm123
+        driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    jpa:
+        show-sql: true
+        hibernate:
+            ddl-auto: create-drop #none, validate, update, create-drop.
+        properties:
+            hibernate:
+                dialect: org.hibernate.dialect.SQLServer2012Dialect
